@@ -158,7 +158,21 @@ a[download]:hover, a[target="_blank"]:hover {
     color: #0066cc;
 }
 
+/* Mobile tweaks */
 @media (max-width: 600px) {
+    /* Make the nav static and fully opaque */
+    nav {
+        position: relative;       /* flows in the document */
+        background: #fff;         /* solid white */
+        backdrop-filter: none;    /* remove blur */
+        box-shadow: none;         /* remove drop-shadow */
+    }
+
+    /* Remove extra top-padding now that nav isn’t fixed */
+    body {
+        padding-top: 0;
+    }
+
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -168,6 +182,13 @@ a[download]:hover, a[target="_blank"]:hover {
         margin: 0.5rem 0;
     }
 
+    /* Slightly tighter top/bottom on the home section */
+    #home {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Heading sizes for smaller screens */
     h1 {
         font-size: 2rem;
     }
