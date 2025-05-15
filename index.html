@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Michael Morris</h1>
+        <p>My Portfolio</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <!-- Fantasy Fairway Project -->
+        <div class="project">
+            <h3>FantasyFairway.com</h3>
+            <p>A fantasy golf web app allowing users to form leagues, draft players and to compete by tracking the scores of those drafted players.</p>
+            <ul>
+                <li>Connected to ESPNs golf api, which eliminates the need for me to manually update any scores or tournament data.</li>
+                <li>Every Tuesday the new PGA tournament and its participating golfers load in automatically to be drafted. Throughout the tournament their scores automatically update as well, fully synchronized with ESPNs leaderboard</li>
+                <li>Built with: React, Node.js      Presented on: MongoDB, Vercel, Render, Github</li>
+                <li>Live site (optimized for mobile):
+                    <a href="https://fantasyfairway.com" target="_blank">fantasyfairway.com</a>
+                </li>
+            </ul>
+            <div class="media-row">
+                <div class="iframe-container">
+                    <p>Interact with the live mobile view:</p>
+                    <iframe
+                        src="https://fantasyfairway.com"
+                        title="Fantasy Fairway Mobile View"
+                        allow="geolocation; microphone; camera"
+                    ></iframe>
+                </div>
+                <div class="qr-column">
+                    <div class="qr-container">
+                        <p>Scan to visit:</p>
+                        <img src="qr-fantasyfairway.png" alt="QR code for fantasyfairway.com">
+                    </div>
+                    <div class="qr-note">
+                        <p>If testing the live site, please allow a few seconds for the database to reconnect.<br>
+                        (Pauses due to site inactivity)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Scorecard Project -->
+        <div class="project">
+            <h3>Live-scorecard.com</h3>
+            <p>A web app to keep track of your group's golf… that automatically updates every score across all phones.</p>
+            <ul>
+                <li>Built with: Vercel, Render, MongoDB, GitHub, Visual Studio Code</li>
+                <li>Live site (optimized for mobile phones):
+                    <a href="https://live-scorecard.com" target="_blank">live-scorecard.com</a>
+                </li>
+            </ul>
+            <div class="media-row">
+                <div class="iframe-container">
+                    <p>Interact with the live mobile view:</p>
+                    <iframe
+                        src="https://live-scorecard.com"
+                        title="Live Scorecard Mobile View"
+                        allow="geolocation; microphone; camera"
+                    ></iframe>
+                </div>
+                <div class="qr-column">
+                    <div class="qr-container">
+                        <p>Scan to visit:</p>
+                        <img src="qr-code.png" alt="QR code for live-scorecard.com">
+                    </div>
+                    <div class="qr-note">
+                        <p>If testing the live site, please allow a few seconds for the database to reconnect.<br>
+                        (Pauses due to site inactivity)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills and Certifications</h2>
+        <ul>
+            <li>CompTIA Cyber Security Analyst Plus (CySA+)</li>
+            <li>CompTIA Security+ Certification</li>
+            <li>Splunk Cloud Certified Admin</li>
+            <li>Splunk Enterprise Certified Admin</li> 
+            <li>Javascript</li>
+            <li>Swift</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Php</li>
+            <li>HTML</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p class="icon-link">
+            <img src="assets/gmail.svg" alt="Gmail" class="contact-icon">
+            <a href="mailto:mchaelmorris@gmail.com">mchaelmorris@gmail.com</a>
+        </p>
+
+        <p class="icon-link">
+            <img src="assets/linkedin.svg" alt="LinkedIn" class="contact-icon">
+            <a href="https://www.linkedin.com/in/michael-morris-421068213/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p class="icon-link">
+            <img src="assets/github.svg" alt="GitHub" class="contact-icon">
+            <a href="https://github.com/born4this" target="_blank">GitHub</a>
+        </p>
+
+        <p class="icon-link">
+            <img src="assets/tryhackme.svg" alt="TryHackMe" class="contact-icon">
+            <a href="https://tryhackme.com/p/morris82" target="_blank">TryHackMe</a>
+        </p>
+    </section>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
