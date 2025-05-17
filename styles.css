@@ -141,7 +141,7 @@ a[download]:hover, a[target="_blank"]:hover {
 
 #skills li {
     display: inline-block;
-    background: #1E4151;
+    background: #334E6B;
     color: white;
     padding: 0.5rem 1rem;
     margin: 0.5rem;
@@ -151,7 +151,7 @@ a[download]:hover, a[target="_blank"]:hover {
 }
 
 #skills li:hover {
-    background: #15403a;
+    background: #2A3F57;
 }
 
 #contact a {
