@@ -18,30 +18,55 @@
         left: 0;
         z-index: 1000;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 0.5rem;
       }
       /* Hide toggle by default */
       .menu-toggle {
         display: none;
       }
       @media (max-width: 600px) {
-        /* Mobile: black bar at very top */
+        /* Mobile: glossy white bar at very top */
         nav {
-          background: rgba(0, 0, 0, 0.8);
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(6px);
+          padding: 1rem;
           top: 0;
+          border-radius: 0;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         /* Show and style the hamburger icon */
         .menu-toggle {
           display: block;
-          color: #fff;
+          color: #222;
           font-size: 1.8rem;
           background: none;
           border: none;
-          padding: 0.5rem;
+          padding: 0.75rem;
           position: absolute;
-          top: 0.5rem;
-          left: 0.5rem;
+          top: 1rem;
+          left: 1rem;
           z-index: 1001;
           cursor: pointer;
+        }
+        /* Hide menu by default */
+        #nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(6px);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Show when toggled */
+        #nav-links.show {
+          display: flex;
+        }
+        nav ul li {
+          margin: 0.75rem 0;
+          text-align: center;
         }
       }
     </style>
@@ -172,7 +197,7 @@
 
         <p class="icon-link">
             <img src="assets/tryhackme.svg" alt="TryHackMe" class="contact-icon">
-            <a href="https://tryhackme.com/p/morris82" target="_blank">TryHackMe</a>
+            <a href="https://tryhackme.com/p/morris82" target="_blank">TryHackMe
         </p>
     </section>
 
