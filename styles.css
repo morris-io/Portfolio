@@ -160,7 +160,7 @@ a[download]:hover, a[target="_blank"]:hover {
 
 /* Mobile tweaks */
 @media (max-width: 600px) {
-    /* Make the nav static and fully opaque */
+    /* nav static and fully opaque */
     nav {
         position: relative;       /* flows in the document */
         background: #fff;         /* solid white */
@@ -168,7 +168,7 @@ a[download]:hover, a[target="_blank"]:hover {
         box-shadow: none;         /* remove drop-shadow */
     }
 
-    /* Remove extra top-padding now that nav isn’t fixed */
+    /*  */
     body {
         padding-top: 0;
     }
@@ -322,17 +322,17 @@ a[download]:hover, a[target="_blank"]:hover {
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
   
-    /* show the hamburger */
+    /* hamburger */
     .menu-toggle {
       display: block;
     }
   
-    /* when we add “show” class, drop it down */
+    /*  */
     nav ul.show {
       display: flex;
     }
   
-    /* adjust spacing of items in the dropdown */
+    /* spacing dropdown */
     nav ul li {
       margin: 0.5rem 0;
       text-align: left;
