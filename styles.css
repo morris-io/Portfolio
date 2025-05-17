@@ -158,9 +158,6 @@ a[download]:hover, a[target="_blank"]:hover {
     color: #0066cc;
 }
 
-<<<<<<< HEAD
-@media (max-width: 600px) {
-=======
 /* Mobile tweaks */
 @media (max-width: 600px) {
     /* Make the nav static and fully opaque */
@@ -176,7 +173,6 @@ a[download]:hover, a[target="_blank"]:hover {
         padding-top: 0;
     }
 
->>>>>>> 69069af5200170904e6d1b07b435e6acb299dfcb
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -186,8 +182,6 @@ a[download]:hover, a[target="_blank"]:hover {
         margin: 0.5rem 0;
     }
 
-<<<<<<< HEAD
-=======
     /* Slightly tighter top/bottom on the home section */
     #home {
         padding-top: 1rem;
@@ -195,7 +189,6 @@ a[download]:hover, a[target="_blank"]:hover {
     }
 
     /* Heading sizes for smaller screens */
->>>>>>> 69069af5200170904e6d1b07b435e6acb299dfcb
     h1 {
         font-size: 2rem;
     }
