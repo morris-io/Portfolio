@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Inline overrides for navbar styling -->
     <style>
-      /* Desktop navbar bar slightly lower */
+      /* Push page content below the fixed nav */
+      body {
+        padding-top: 4rem;
+      }
+
+      /* Desktop navbar: sleek translucent bar slightly lower */
       nav {
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(8px);
@@ -20,12 +25,16 @@
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         border-radius: 0.5rem;
       }
-      /* Hide toggle by default */
+      /* Hide hamburger toggle by default */
       .menu-toggle {
         display: none;
       }
+
       @media (max-width: 600px) {
         /* Mobile: glossy white bar at very top */
+        body {
+          padding-top: 5rem; /* height of nav + some breathing space */
+        }
         nav {
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(6px);
@@ -99,7 +108,7 @@
             <ul>
                 <li>Eliminates the need for me to manually update any scores or tournament data.</li>
                 <li>Every Tuesday the new PGA tournament and its participating golfers load in automatically to be drafted. Throughout the tournament their scores automatically update as well, fully syncronized with PGA leaderboards.</li>
-                <li>Built with: React, Node.js      Presented on: MongoDB, Vercel, Render, Github</li>
+                <li>Built with: React, Node.js      Presented on: MongoDB, Vercel, Render, GitHub</li>
                 <li>Live site (optimized for mobile):
                     <a href="https://fantasyfairway.com" target="_blank">fantasyfairway.com</a>
                 </li>
@@ -166,12 +175,12 @@
             <li>CompTIA Security+ Certification</li>
             <li>Splunk Cloud Certified Admin</li>
             <li>Splunk Enterprise Certified Admin</li>
-            <li>Javascript</li>
+            <li>JavaScript</li>
             <li>Swift</li>
             <li>SQL</li>
             <li>Python</li>
             <li>C++</li>
-            <li>Php</li>
+            <li>PHP</li>
             <li>HTML</li>
         </ul>
     </section>
@@ -197,10 +206,9 @@
 
         <p class="icon-link">
             <img src="assets/tryhackme.svg" alt="TryHackMe" class="contact-icon">
-            <a href="https://tryhackme.com/p/morris82" target="_blank">TryHackMe
+            <a href="https://tryhackme.com/p/morris82" target="_blank">TryHackMe</a>
         </p>
     </section>
-
 
     <script src="scripts.js"></script>
 </body>
