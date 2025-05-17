@@ -141,7 +141,7 @@ a[download]:hover, a[target="_blank"]:hover {
 
 #skills li {
     display: inline-block;
-    background: #334E6B;
+    background: #0077ff;
     color: white;
     padding: 0.5rem 1rem;
     margin: 0.5rem;
@@ -151,7 +151,7 @@ a[download]:hover, a[target="_blank"]:hover {
 }
 
 #skills li:hover {
-    background: #2A3F57;
+    background: #005fcc;
 }
 
 #contact a {
@@ -340,31 +340,6 @@ a[download]:hover, a[target="_blank"]:hover {
     }
   }
   
-
-:root {
-    --primary-text: #1E4151;
-  }
-  
-  body {
-    color: var(--primary-text);
-  }
-  
-  /* make all links/nav inherit the same */
-  nav ul li a,
-  a[download],
-  a[target="_blank"],
-  #contact a,
-  .icon-link a {
-    color: var(--primary-text);
-  }
-  
-  /* adjust hover to something a bit lighter if you like */
-  nav ul li a:hover,
-  a[download]:hover,
-  a[target="_blank"]:hover,
-  .icon-link a:hover {
-    color: lighten(var(--primary-text), 15%);
-  }
 
 .icon-link img[alt="GitHub"] { filter: invert(14%) sepia(100%) saturate(0%) hue-rotate(178deg) brightness(98%) contrast(92%); }
 .icon-link img[alt="LinkedIn"] { filter: invert(28%) sepia(78%) saturate(720%) hue-rotate(175deg) brightness(91%) contrast(94%); }
