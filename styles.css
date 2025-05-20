@@ -198,7 +198,7 @@ a[download]:hover, a[target="_blank"]:hover {
     }
 }
 
-/* ----------  UPDATED BLOCK: centres the iframe + QR row  ---------- */
+/* ----------  centres the iframe + QR row  ---------- */
 .media-row {
     display: flex;
     flex-wrap: wrap;
