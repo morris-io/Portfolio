@@ -363,9 +363,10 @@ a[download]:hover, a[target="_blank"]:hover {
     }
 }
 
-/* ---- hide only the QR image on small screens, keep the note ---- */
+/* ---- hide QR code + note on small screens ---- */
 @media (max-width: 600px) {
-    .qr-container img {     /* the actual QR graphic */
+    .qr-column,
+    .qr-container {
       display: none !important;
     }
   }
