@@ -323,7 +323,7 @@ a[download]:hover, a[target="_blank"]:hover {
         top: 100%;
         left: 0;
         background: rgba(255,255,255,0.95);
-        width: 200px;
+        width: 280px;
         padding: 0.5rem 0;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
