@@ -162,13 +162,12 @@ a[download]:hover, a[target="_blank"]:hover {
 @media (max-width: 600px) {
     /* nav static and fully opaque */
     nav {
-        position: relative;       /* flows in the document */
-        background: #fff;         /* solid white */
-        backdrop-filter: none;    /* remove blur */
-        box-shadow: none;         /* remove drop-shadow */
+        position: relative;
+        background: #fff;
+        backdrop-filter: none;
+        box-shadow: none;
     }
 
-    /*  */
     body {
         padding-top: 0;
     }
@@ -207,10 +206,10 @@ a[download]:hover, a[target="_blank"]:hover {
     padding-left: 1.3rem;
 
     /* new bits */
-    width: max-content;      /* shrink-wrap around its children      */
-    margin-left: auto;       /* centre the 710-px block horizontally */
+    width: max-content;
+    margin-left: auto;
     margin-right: auto;
-    justify-content: center; /* keep items nicely spaced             */
+    justify-content: center;
     align-items: center;
 }
 
@@ -334,16 +333,33 @@ a[download]:hover, a[target="_blank"]:hover {
         display: block;
     }
 
-    /*  */
     nav ul.show {
         display: flex;
     }
 
-    /* spacing dropdown */
     nav ul li {
         margin: 0.5rem 0;
         text-align: left;
         padding: 0 1rem;
+    }
+}
+
+/* ---- mobile layout fix for media-row ---- */
+@media (max-width: 600px) {
+    .media-row {
+        flex-direction: column;   /* stack items vertically */
+        width: 100%;              /* match card width       */
+        padding-left: 0;
+    }
+
+    .iframe-container,
+    .qr-column {
+        width: 100%;              /* full width inside card */
+        max-width: 330px;         /* keep current sizing    */
+    }
+
+    .qr-column {
+        margin-top: 1.5rem;       /* gentle spacing below iframe */
     }
 }
 
