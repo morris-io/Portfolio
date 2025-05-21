@@ -363,6 +363,15 @@ a[download]:hover, a[target="_blank"]:hover {
     }
 }
 
+/* ---- hide QR code + note on small screens ---- */
+@media (max-width: 600px) {
+    .qr-column,
+    .qr-container {
+      display: none !important;
+    }
+  }
+  
+
 .icon-link img[alt="GitHub"]   { filter: invert(14%) sepia(100%) saturate(0%)   hue-rotate(178deg) brightness(98%) contrast(92%); }
 .icon-link img[alt="LinkedIn"] { filter: invert(28%) sepia(78%)  saturate(720%) hue-rotate(175deg) brightness(91%) contrast(94%); }
 .icon-link img[alt="Gmail"]    { filter: invert(36%) sepia(78%)  saturate(592%) hue-rotate(326deg) brightness(93%) contrast(90%); }
