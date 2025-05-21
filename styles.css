@@ -371,6 +371,16 @@ a[download]:hover, a[target="_blank"]:hover {
     }
   }
   
+/* ---- fine-tune nav & hamburger spacing on phones ---- */
+@media (max-width: 600px) {
+    nav {
+        margin-top: 1rem;   /* push the whole bar down a bit */
+    }
+
+    .menu-toggle {
+        top: 0.2rem;        /* nudge hamburger closer to nav top edge */
+    }
+}
 
 .icon-link img[alt="GitHub"]   { filter: invert(14%) sepia(100%) saturate(0%)   hue-rotate(178deg) brightness(98%) contrast(92%); }
 .icon-link img[alt="LinkedIn"] { filter: invert(28%) sepia(78%)  saturate(720%) hue-rotate(175deg) brightness(91%) contrast(94%); }
