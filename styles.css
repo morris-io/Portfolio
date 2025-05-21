@@ -205,7 +205,6 @@ a[download]:hover, a[target="_blank"]:hover {
     margin-top: 2rem;
     padding-left: 1.3rem;
 
-    /* new bits */
     width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -315,7 +314,6 @@ a[download]:hover, a[target="_blank"]:hover {
   
 /* 2) On small screens, hide the UL and show the button */
 @media (max-width: 600px) {
-    /* hide default navbar */
     nav ul {
         display: none;
         flex-direction: column;
@@ -328,7 +326,6 @@ a[download]:hover, a[target="_blank"]:hover {
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-    /* hamburger */
     .menu-toggle {
         display: block;
     }
@@ -347,19 +344,19 @@ a[download]:hover, a[target="_blank"]:hover {
 /* ---- mobile layout fix for media-row ---- */
 @media (max-width: 600px) {
     .media-row {
-        flex-direction: column;   /* stack items vertically */
-        width: 100%;              /* match card width       */
+        flex-direction: column;
+        width: 100%;
         padding-left: 0;
     }
 
     .iframe-container,
     .qr-column {
-        width: 100%;              /* full width inside card */
-        max-width: 330px;         /* keep current sizing    */
+        width: 100%;
+        max-width: 330px;
     }
 
     .qr-column {
-        margin-top: 1.5rem;       /* gentle spacing below iframe */
+        margin-top: 1.5rem;
     }
 }
 
@@ -367,18 +364,19 @@ a[download]:hover, a[target="_blank"]:hover {
 @media (max-width: 600px) {
     .qr-column,
     .qr-container {
-      display: none !important;
+        display: none !important;
     }
-  }
-  
+}
+
 /* ---- fine-tune nav & hamburger spacing on phones ---- */
 @media (max-width: 600px) {
     nav {
-        margin-top: 1rem;   /* push the whole bar down a bit */
+        margin-top: 0;          /* flush with screen top */
+        padding: 1.4rem 1rem;   /* taller bar for a “sleeker” look */
     }
 
     .menu-toggle {
-        top: 0.2rem;        /* nudge hamburger closer to nav top edge */
+        top: 0.4rem;            /* centre icon within taller bar */
     }
 }
 
