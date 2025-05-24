@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Inline overrides for navbar styling -->
     <style>
-      /* Maintain original desktop body offset */
       body {
         padding-top: 4rem;
       }
 
-      /* Desktop navbar: sleek translucent bar flush at top */
+      /* Desktop navbar */
       nav {
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(8px);
@@ -25,17 +23,16 @@
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         border-radius: 0.5rem;
       }
-      /* Hide hamburger toggle on desktop */
+      /* Hide mobile icon */
       .menu-toggle {
         display: none;
       }
 
       @media (max-width: 600px) {
-        /* Mobile: increase top offset to clear taller nav */
         body {
           padding-top: 5rem;
         }
-        /* Mobile navbar: glossy white bar flush top */
+        /* Mobile navbar */
         nav {
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(6px);
@@ -45,7 +42,7 @@
           border-radius: 0;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Show and style the hamburger icon */
+        /* icon */
         .menu-toggle {
           display: block;
           color: #222;
@@ -59,7 +56,7 @@
           z-index: 1001;
           cursor: pointer;
         }
-        /* Hide menu by default */
+        /* Hide menu */
         #nav-links {
           display: none;
           flex-direction: column;
@@ -71,7 +68,7 @@
           backdrop-filter: blur(6px);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Show when toggled */
+        /* Show if clicked */
         #nav-links.show {
           display: flex;
         }
@@ -83,9 +80,8 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
-        <!-- Mobile menu toggle -->
+        <!-- Mobile menu -->
         <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <ul id="nav-links">
             <li><a href="#home">Home</a></li>
@@ -101,9 +97,9 @@
         <p>My Portfolio</p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects">
-        <!-- Fantasy Fairway Project -->
+        <!-- Fantasy Fairway -->
         <div class="project">
             <h3>FantasyFairway.com</h3>
             <p>A fantasy golf web app allowing users to form leagues, draft players and to compete between eachother.</p>
@@ -137,7 +133,7 @@
             </div>
         </div>
 
-        <!-- Live Scorecard Project -->
+        <!-- Live Scorecard -->
         <div class="project">
             <h3>Live-scorecard.com</h3>
             <p>A web app to keep track of your group's golf match. Designed to automatically update every score across all phones within seconds.</p>
@@ -187,7 +183,7 @@
         </ul>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
         <h2>Contact Me</h2>
 
