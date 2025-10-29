@@ -81,7 +81,6 @@
 </head>
 <body>
     <nav>
-        <!-- Mobile menu -->
         <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <ul id="nav-links">
             <li><a href="#home">Home</a></li>
@@ -91,103 +90,129 @@
         </ul>
     </nav>
 
-    <!-- Home Section -->
     <section id="home">
         <h1>Michael Morris</h1>
         <p>My Portfolio</p>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
-        <!-- Fantasy Fairway -->
-        <div class="project">
-            <h3>FantasyFairway.com</h3>
-            <p>A fantasy golf web app allowing users to form leagues, draft players and to compete between eachother.</p>
-            <ul>
-                <li>Every Tuesday a new PGA tournament and its participating golfers load in. Turn by turn, each user drafts 4 golfers to their team. Every golfer and their score are then displayed and updated underneath of their team's name on the leaderboard page.</li>
-                <li>Connected to ESPN and SportContentApis golf leaderboard for official scores and participents, eliminating the need to manually update any tournament data.</li>
-                <li>Built with: React, Node.js.      Presented on: MongoDB, Vercel, Render, GitHub.</li>
-                <li>Live site (optimized for mobile):
-                    <a href="https://fantasyfairway.com" target="_blank">fantasyfairway.com</a>
-                </li>
-            </ul>
-            <div class="media-row">
-                <div class="iframe-container">
-                    <p>Interact with the live mobile view:</p>
-                    <iframe
-                        src="https://fantasyfairway.com"
-                        title="Fantasy Fairway Mobile View"
-                        allow="geolocation; microphone; camera"
-                    ></iframe>
-                </div>
-                <div class="qr-column">
-                    <div class="qr-container">
-                        <p>Scan to visit:</p>
-                        <img src="qr-fantasyfairway.png" alt="QR code for fantasyfairway.com">
-                    </div>
-                    <div class="qr-note">
-                        <p>If testing the live site, please allow a few seconds for the database to reconnect.<br>
-                        (Pauses due to site inactivity)</p>
-                    </div>
-                </div>
+        <div class="carousel-container">
+            <button class="carousel-button carousel-button--left">
+                <img src="assets/custom-right-arrow.png" alt="Previous Project" class="flipped-arrow">
+            </button>
+            
+            <div class="carousel-viewport">
+                <ul class="carousel-track">
+                    <li class="carousel-slide">
+                        <div class="project">
+                            <h3>FantasyFairway.com</h3>
+                            <p>A fantasy golf web app allowing users to form leagues, draft players and to compete between eachother.</p>
+                            <ul>
+                                <li>Every Tuesday a new PGA tournament and its participating golfers load in. Turn by turn, each user drafts 4 golfers to their team. Every golfer and their score are then displayed and updated underneath of their team's name on the leaderboard page.</li>
+                                <li>Connected to ESPN and SportContentApis golf leaderboard for official scores and participents, eliminating the need to manually update any tournament data.</li>
+                                <li>Built with: React, Node.js.      Presented on: MongoDB, Vercel, Render, GitHub.</li>
+                                <li>Live site (optimized for mobile):
+                                    <a href="https://fantasyfairway.com" target="_blank">fantasyfairway.com</a>
+                                </li>
+                            </ul>
+                            <div class="media-row">
+                                <div class="iframe-container">
+                                    <p>Interact with the live mobile view:</p>
+                                    <iframe
+                                        src="https://fantasyfairway.com"
+                                        title="Fantasy Fairway Mobile View"
+                                        allow="geolocation; microphone; camera"
+                                    ></iframe>
+                                </div>
+                                <div class="qr-column">
+                                    <div class="qr-container">
+                                        <p>Scan to visit:</p>
+                                        <img src="qr-fantasyfairway.png" alt="QR code for fantasyfairway.com">
+                                    </div>
+                                    <div class="qr-note">
+                                        <p>When testing the live site, please allow a few seconds for the database to reconnect.<br>
+                                        (Pauses due to site inactivity)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="carousel-slide">
+                        <div class="project">
+                            <h3>PickofDayBot.com</h3>
+                            <p>A full-stack subscription service (SaaS) that uses custom algorithms to provide users with daily, data-driven sports analytics and picks.</p>
+                            <ul>
+                                <li>Engineered three sports analytics algorithms (2 MLB, 1 NFL) that independently deliver daily picks and update results in real time.</li>
+                                <li>Connected with Stripe API to build a complete subscription service, handling payment gateways, checkout sessions, and Stripe webhooks to manage user subscription status.</li>
+                                <li>Stack: React, Node.js, Next.js, Bcrypt. Platforms: Stripe, Vercel, MongoDB, GitHub.</li>
+                                <li>Live site (optimized for mobile phones):
+                                    <a href="https://Pickofdaybot.com" target="_blank">PickofDayBot.com</a>
+                                </li>
+                            </ul>
+                            <div class="media-row">
+                                <div class="iframe-container">
+                                    <p>Interact with the live mobile view:</p>
+                                    <iframe
+                                        src="https://pickofdaybot.com"
+                                        title="Pick of Day Bot Mobile View"
+                                        allow="geolocation; microphone; camera"
+                                    ></iframe>
+                                </div>
+                                <div class="qr-column">
+                                    <div class="qr-container">
+                                        <p>Scan to visit:</p>
+                                        <img src="qr-code.png" alt="QR code for live-scorecard.com">
+                                    </div>
+                                    <div class="qr-note">
+                                        <p>Due to security concerns, login and signup are disabled when interacting on this demo.<br>
+                                        (Use the link for login features)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
 
-        <!-- Live Scorecard -->
-        <div class="project">
-            <h3>Live-scorecard.com</h3>
-            <p>A web app to keep track of your group's golf match. Designed to automatically update every score across all phones within seconds.</p>
-            <ul>
-                <li>Built with: Vercel, Render, MongoDB, GitHub, Visual Studio Code</li>
-                <li>Live site (optimized for mobile phones):
-                    <a href="https://live-scorecard.com" target="_blank">live-scorecard.com</a>
-                </li>
-            </ul>
-            <div class="media-row">
-                <div class="iframe-container">
-                    <p>Interact with the live mobile view:</p>
-                    <iframe
-                        src="https://live-scorecard.com"
-                        title="Live Scorecard Mobile View"
-                        allow="geolocation; microphone; camera"
-                    ></iframe>
-                </div>
-                <div class="qr-column">
-                    <div class="qr-container">
-                        <p>Scan to visit:</p>
-                        <img src="qr-code.png" alt="QR code for live-scorecard.com">
-                    </div>
-                    <div class="qr-note">
-                        <p>If testing the live site, please allow a few seconds for the database to reconnect.<br>
-                        (Pauses due to site inactivity)</p>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-button carousel-button--right">
+                <img src="assets/custom-right-arrow.png" alt="Next Project">
+            </button>
         </div>
     </section>
-    <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills and Certifications</h2>
+        <h2>Technical Skills</h2>
+
+        <h3>Languages & Frameworks</h3>
         <ul>
-            <li>CompTIA Cyber Security Analyst Plus (CySA+)</li>
-            <li>CompTIA Security+ Certification</li>
-            <li>Splunk Cloud Certified Admin</li>
-            <li>Splunk Enterprise Certified Admin</li>
-            <li>JavaScript</li>
-            <li>Node.js</li>
-            <li>React</li>
+            <li>JavaScript (ES6+)</li>
+            <li>TypeScript</li>
             <li>Python</li>
-            <li>C++</li>
             <li>SQL</li>
-            <li>Swift</li>
-            <li>PHP</li>
-            <li>HTML</li>
+            <li>HTML/CSS</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Node.js</li>
+        </ul>
+
+        <h3>Tools & Platforms</h3>
+        <ul>
+            <li>Vercel</li>
             <li>AWS</li>
             <li>Azure</li>
+            <li>MongoDB</li>
+            <li>MySQL</li>
+            <li>NextAuth.js</li>
+            <li>Git / GitHub</li>
+        </ul>
+        <h3>Certification Courses</h3>
+        <ul>
+            <li>CompTIA CySA+</li>
+            <li>CompTIA Security+</li>
+            <li>Splunk Cloud Admin</li>
         </ul>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <h2>Contact Me</h2>
 

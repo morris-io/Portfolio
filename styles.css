@@ -50,7 +50,7 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -90,7 +90,7 @@ p {
 }
 
 .project {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     padding: 1.5rem;
     background-color: white;
     border-radius: 16px;
@@ -146,6 +146,16 @@ a[download]:hover, a[target="_blank"]:hover {
     border-radius: 5px;
     font-weight: 500;
     transition: background 0.3s ease;
+    font-size: .9rem;
+}
+
+#skills h3 {
+    font-size: 1.1rem; /* <-- ADD THIS (adjust 1.2rem as needed) */
+    
+    /* These are just good to add for consistency */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
 #skills li:hover {
@@ -199,8 +209,7 @@ a[download]:hover, a[target="_blank"]:hover {
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
-    padding-left: 1.3rem;
-
+    padding-left: 1.2rem;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -375,6 +384,132 @@ a[download]:hover, a[target="_blank"]:hover {
         top: 0.4rem;            /* centre icon within taller bar */
     }
 }
+
+/* === ADD THESE RULES TO THE END OF STYLES.CSS === */
+
+/* Container to position buttons */
+.carousel-container {
+    position: relative;
+    /* Nudge buttons slightly on mobile */
+    padding: 0; 
+}
+
+/* The "window" that hides the slides */
+.carousel-viewport {
+    overflow: hidden;
+}
+
+/* The "track" that holds the slides and moves */
+.carousel-track {
+    list-style: none;
+    display: flex;
+    /* 100% width * 2 projects = 200% */
+    width: 200%; 
+    padding-left: 0;
+    margin: 0;
+    /* Start at slide 1 */
+    transform: translateX(0%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* This class will be added by JS to move the track */
+.carousel-track.slide-2 {
+    /* Move left by 50% (which is one full slide) */
+    transform: translateX(-50%);
+}
+
+/* A single slide */
+.carousel-slide {
+    /* Each slide takes up half the track (50% of 200% = 100% of viewport) */
+    width: 50%; 
+    /* Adds a small gutter between projects */
+    padding: 0 0.5rem; 
+    box-sizing: border-box;
+}
+
+/* Tweak project margin when in carousel */
+.carousel-slide .project {
+    margin-bottom: 1rem;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 45%; 
+    transform: translateY(-50%);
+    background: #005fccc9;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    /* REMOVE font-size, font-weight, color as image will provide arrow */
+    
+    display: flex; /* <-- ADD THESE to center the image */
+    justify-content: center; /* <-- ADD THESE */
+    align-items: center; /* <-- ADD THESE */
+
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.2s ease;
+}
+
+.carousel-button:hover {
+    background: #004999;
+}
+
+.carousel-button--left {
+    left: -15px;
+}
+
+.carousel-button--right {
+    right: -15px;
+}
+
+/* On mobile, hide carousel buttons and just stack */
+@media (max-width: 600px) {
+    .carousel-button {
+        display: none;
+    }
+    .carousel-track {
+        display: block; /* Stack vertically */
+        width: 100%;
+    }
+    .carousel-slide {
+        width: 100%; /* Each slide is full width */
+        padding: 0;
+    }
+    .carousel-track.slide-2 {
+        transform: none; /* Don't move */
+    }
+    .carousel-container {
+        padding: 0;
+    }
+}
+
+/* Style for the images within the carousel buttons */
+.carousel-button img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    filter: brightness(0) invert(1); /* Adjust color if needed, 0.2 makes it dark grey */
+    transition: filter 0.2s ease; /* Smooth transition for hover */
+}
+
+/* If you are flipping the right arrow for the left button */
+.carousel-button .flipped-arrow {
+    transform: scaleX(-1); /* Flips the image horizontally */
+}
+
+/* Nudge arrows inside buttons for optical centering */
+.carousel-button--left img {
+    position: relative;
+    right: 1px; /* Moves left arrow slightly left */
+}
+
+.carousel-button--right img {
+    position: relative;
+    left: 1px;  /* Moves right arrow slightly right */
+}
+
 
 .icon-link img[alt="GitHub"]   { filter: invert(14%) sepia(100%) saturate(0%)   hue-rotate(178deg) brightness(98%) contrast(92%); }
 .icon-link img[alt="LinkedIn"] { filter: invert(28%) sepia(78%)  saturate(720%) hue-rotate(175deg) brightness(91%) contrast(94%); }
