@@ -1,13 +1,10 @@
-// === NEW CAROUSEL SCRIPT ===
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
   const prev = document.querySelector('.carousel-button--left');
   const next = document.querySelector('.carousel-button--right');
   
-  // Check if these elements exist on the page
   if (track && prev && next) {
       
-      // Hide prev button to start
       prev.style.display = 'none';
 
       next.addEventListener('click', () => {
@@ -24,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// === YOUR EXISTING MOBILE MENU SCRIPT ===
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('menu-toggle');
   const nav    = document.getElementById('nav-links');
