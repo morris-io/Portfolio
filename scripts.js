@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
       prev.style.display = 'none';
 
       next.addEventListener('click', () => {
-          track.classList.add('slide-2'); // Move to slide 2
-          prev.style.display = 'flex';   // Show prev button
-          next.style.display = 'none';    // Hide next button
+          track.classList.add('slide-2');
+          prev.style.display = 'flex';
+          next.style.display = 'none';
       });
 
       prev.addEventListener('click', () => {
-          track.classList.remove('slide-2'); // Move back to slide 1
-          prev.style.display = 'none';     // Hide prev button
-          next.style.display = 'flex';    // Show next button
+          track.classList.remove('slide-2'); 
+          prev.style.display = 'none'; 
+          next.style.display = 'flex'; 
       });
   }
 });
