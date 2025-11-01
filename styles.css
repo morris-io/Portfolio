@@ -12,6 +12,7 @@ body {
     color: #222;
     padding-top: 4rem;
     background: url("assets/background.png") center / cover no-repeat fixed;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 nav {
@@ -23,6 +24,7 @@ nav {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease; 
 }
 
 nav ul {
@@ -95,7 +97,7 @@ p {
     background-color: white;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 .project:hover {
@@ -116,6 +118,7 @@ pre {
     padding: 1rem;
     border-radius: 5px;
     overflow-x: auto;
+    transition: background-color 0.3s ease; 
 }
 
 code {
@@ -155,6 +158,7 @@ a[download]:hover, a[target="_blank"]:hover {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     color: #333;
+    transition: color 0.3s ease; 
 }
 
 #skills li:hover {
@@ -247,6 +251,7 @@ a[download]:hover, a[target="_blank"]:hover {
     text-align: center;
     margin-top: 0;
     margin-bottom: 5.7rem;
+    transition: background-color 0.3s ease; 
 }
 
 .qr-container img {
@@ -257,6 +262,7 @@ a[download]:hover, a[target="_blank"]:hover {
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .qr-note {
@@ -270,6 +276,7 @@ a[download]:hover, a[target="_blank"]:hover {
     width: 100%;
     max-width: 280px;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .icon-link {
@@ -297,6 +304,7 @@ a[download]:hover, a[target="_blank"]:hover {
     height: 20px;
     object-fit: contain;
     filter: brightness(0.2);
+    transition: filter 0.3s ease; 
 }
 
 .menu-toggle {
@@ -309,6 +317,7 @@ a[download]:hover, a[target="_blank"]:hover {
     top: 1rem;
     left: 1rem;
     z-index: 1001;
+    transition: color 0.3s ease; 
 }
   
 @media (max-width: 600px) {
@@ -320,12 +329,12 @@ a[download]:hover, a[target="_blank"]:hover {
         left: 0;
         background: rgba(255,255,255,0.95);
         width: 280px;
-        padding: 0.5rem 0;
+        padding: 0rem 0;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
     .menu-toggle {
-        display: block;
+        display: none;
     }
 
     nav ul.show {
@@ -367,11 +376,11 @@ a[download]:hover, a[target="_blank"]:hover {
 @media (max-width: 600px) {
     nav {
         margin-top: 0;   
-        padding: 1.4rem 1rem;   
+        padding: 1.5rem 1rem; 
     }
 
     .menu-toggle {
-        top: 0.4rem;
+        top: .25rem;
     }
 }
 
@@ -419,9 +428,9 @@ a[download]:hover, a[target="_blank"]:hover {
     width: 44px;
     height: 44px;
     
-    display: flex; /* <-- ADD THESE to center the image */
-    justify-content: center; /* <-- ADD THESE */
-    align-items: center; /* <-- ADD THESE */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 
     cursor: pointer;
     z-index: 10;
@@ -487,3 +496,161 @@ a[download]:hover, a[target="_blank"]:hover {
 .icon-link img[alt="LinkedIn"] { filter: invert(28%) sepia(78%)  saturate(720%) hue-rotate(175deg) brightness(91%) contrast(94%); }
 .icon-link img[alt="Gmail"]    { filter: invert(36%) sepia(78%)  saturate(592%) hue-rotate(326deg) brightness(93%) contrast(90%); }
 .icon-link img[alt="TryHackMe"]{ filter: none; }
+
+
+
+.night-mode-button {
+    position: fixed;
+    top: .5rem;
+    right: 1.5rem;
+    z-index: 2000; /* Above nav */
+    
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    
+    font-size: 1.5rem; /* For emoji */
+    line-height: 1;
+    
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.night-mode-button:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+body.night-mode {
+    background: #1a1a1a;
+    color: #eee;
+}
+
+body.night-mode nav {
+    background: rgba(30, 30, 30, 0.9);
+}
+
+body.night-mode nav ul li a {
+    color: #eee;
+}
+
+body.night-mode nav ul li a:hover {
+    color: #00aaff;
+    border-bottom-color: #00aaff;
+}
+
+body.night-mode .project {
+    background-color: #282828;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3 {
+    color: #fff;
+}
+
+body.night-mode #skills h3 {
+    color: #ddd;
+}
+
+body.night-mode #skills li {
+    background: #005fcc;
+}
+
+body.night-mode #skills li:hover {
+    background: #004999;
+}
+
+body.night-mode pre {
+    background: #2a2a2a;
+    color: #f4f4f4;
+}
+
+body.night-mode a[download], 
+body.night-mode a[target="_blank"] {
+    color: #00aaff;
+}
+
+body.night-mode a[download]:hover, 
+body.night-mode a[target="_blank"]:hover {
+    color: #0077ff;
+}
+
+body.night-mode #contact a,
+body.night-mode .icon-link a {
+    color: #00aaff;
+}
+
+body.night-mode #contact a:hover,
+body.night-mode .icon-link a:hover {
+    color: #0077ff;
+}
+
+body.night-mode .iframe-container p,
+body.night-mode .qr-container p {
+    color: #eee !important;
+}
+
+body.night-mode .qr-container img {
+    background: #282828; 
+    border-color: #444;
+}
+
+body.night-mode .qr-note {
+    background: #3a3a3a;
+    color: #eee;
+    border-left-color: #f4c542;
+}
+
+body.night-mode .contact-icon {
+    filter: brightness(0) invert(1); 
+}
+
+body.night-mode .icon-link img[alt="GitHub"],
+body.night-mode .icon-link img[alt="LinkedIn"],
+body.night-mode .icon-link img[alt="Gmail"],
+body.night-mode .icon-link img[alt="TryHackMe"] {
+     filter: brightness(0) invert(1);
+}
+
+body.night-mode .carousel-button {
+    background: #004999c9;
+}
+
+body.night-mode .carousel-button:hover {
+    background: #003366;
+}
+
+body.night-mode .night-mode-button {
+    background: #282828;
+    color: #fff;
+    border-color: #444;
+}
+
+/* Night mode mobile specific */
+@media (max-width: 600px) {
+    body.night-mode nav {
+        background: #222;
+        backdrop-filter: none;
+    }
+    
+    body.night-mode nav ul {
+        background: rgba(30,30,30,0.95);
+    }
+    
+    body.night-mode .menu-toggle {
+        color: #eee;
+    }
+}
+
+/* Final closing brace from original file */

@@ -19,6 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
           next.style.display = 'flex'; 
       });
   }
+
+  // --- NIGHT MODE SCRIPT ADDED HERE ---
+  const nightModeToggle = document.getElementById('night-mode-toggle');
+  const body = document.body;
+
+  if (nightModeToggle) {
+    nightModeToggle.addEventListener('click', () => {
+      body.classList.toggle('night-mode');
+      
+      // Change icon based on mode
+      if (body.classList.contains('night-mode')) {
+        nightModeToggle.innerHTML = '☀️'; // Sun icon for light mode
+        nightModeToggle.setAttribute('aria-label', 'Toggle light mode');
+      } else {
+        nightModeToggle.innerHTML = '🌙'; // Moon icon for night mode
+        nightModeToggle.setAttribute('aria-label', 'Toggle night mode');
+      }
+    });
+  }
+  // --- END OF NIGHT MODE SCRIPT ---
+
 });
 
 document.addEventListener('DOMContentLoaded', () => {
