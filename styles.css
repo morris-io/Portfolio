@@ -652,3 +652,15 @@ body.night-mode .night-mode-button {
     }
 }
 
+
+#home {
+    padding-bottom: 0 !important;
+}
+
+#home p {
+    margin-bottom: .5rem !important; 
+}
+
+#experience {
+    padding-top: .5 !important;
+}
