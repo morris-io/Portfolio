@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Michael J. Morris | Technical Support Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <style>
       body {
@@ -71,6 +71,19 @@
           text-align: center;
         }
       }
+      
+      /* Inline style for tech tags */
+      .tech-tag {
+        display: inline-block;
+        background: #0077ff;
+        color: white;
+        padding: 0.3rem 0.6rem;
+        margin-right: 5px;
+        margin-top: 5px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
     </style>
 </head>
 <body>
@@ -78,6 +91,7 @@
         <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <ul id="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -85,11 +99,28 @@
     </nav>
 
     <section id="home">
-        <h1>Michael Morris</h1>
-        <p>My Portfolio</p>
+        <h1>Michael J. Morris</h1>
+        <h2>Technical Support Engineer</h2>
+        <p>Cloud Infrastructure | System Reliability | Automation</p>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="project">
+            <h3>East Coast Jewels | Freelance Web Support Specialist</h3>
+            <p>Remote (Contract) | March 2024 - Present</p>
+            <ul>
+                <li>Acted as the primary technical point of contact, diagnosing platform errors and resolving payment gateway disputes.</li>
+                <li>Troubleshot and resolved front-end UI/UX issues using HTML/CSS to improve mobile responsiveness and customer checkout flow.</li>
+                <li>Collaborated directly with a non-technical business owner, translating complex technical issues into clear, actionable solutions.</li>
+                <li>Live site: <a href="https://eastcoastjewels.art" target="_blank">EastCoastJewels.art</a></li>
+            </ul>
+        
+        </div>
     </section>
 
     <section id="projects">
+        <h2>Technical Projects</h2>
         <div class="carousel-container">
             <button class="carousel-button carousel-button--left">
                 <img src="assets/custom-right-arrow.png" alt="Previous Project" class="flipped-arrow">
@@ -97,14 +128,52 @@
             
             <div class="carousel-viewport">
                 <ul class="carousel-track">
+                    
+                    <li class="carousel-slide">
+                        <div class="project">
+                            <h3>PickofDayBot.com</h3>
+                            <p>A full-stack SaaS subscription service running on serverless infrastructure.</p>
+                            <ul>
+                                <li>Deployed serverless backend on Vercel, configuring API routes and optimizing database connectivity.</li>
+                                <li>Monitored and troubleshot Stripe webhook events to resolve payment failures and ensure real-time subscription synchronization.</li>
+                                <li>Secured user data by implementing Identity and Access Management (IAM) protocols using NextAuth.js.</li>
+                                <li>Automated daily operations by configuring serverless cron jobs.</li>
+                                <li>Stack: Next.js, React, Node.js, MongoDB, Stripe, NextAuth.js.</li>
+                                <li>Live site (optimized for mobile phones):
+                                    <a href="https://Pickofdaybot.com" target="_blank">Pickofdaybot.com</a>
+                                </li>
+                            </ul>
+                            <div class="media-row">
+                                <div class="iframe-container">
+                                    <p>Interact with the live mobile view:</p>
+                                    <iframe
+                                        src="https://pickofdaybot.com"
+                                        title="Pick of Day Bot Mobile View"
+                                        allow="geolocation; microphone; camera"
+                                    ></iframe>
+                                </div>
+                                <div class="qr-column">
+                                    <div class="qr-container">
+                                        <p>Scan to visit:</p>
+                                        <img src="qr-code.png" alt="QR code for pickofdaybot.com">
+                                    </div>
+                                    <div class="qr-note">
+                                        <p>Due to security concerns, login and signup are disabled when interacting on this demo.<br>
+                                        (Use the link for login features)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
                     <li class="carousel-slide">
                         <div class="project">
                             <h3>FantasyFairway.com</h3>
                             <p>A fantasy golf web app allowing users to form leagues, draft players and to compete between each other.</p>
                             <ul>
-                                <li>Every Tuesday a new PGA tournament and its participating golfers load in. Turn by turn, each user drafts 4 golfers to their team. Every golfer and their score are then displayed and updated underneath of their team's name on the leaderboard page.</li>
-                                <li>Connected to ESPN and SportContentApis golf leaderboard for official scores and participants, eliminating the need to manually update any tournament data.</li>
-                                <li>Stack: React, Node.js.      Platforms: MongoDB, Vercel, AWS, GitHub.</li>
+                                <li>Built cloud deployment pipelines on Vercel, managing CI/CD workflows and resolving build errors.</li>
+                                <li>Managed third-party REST API integrations to fetch live PGA tour data.</li>
+                                <li>Stack: React, Node.js. Platforms: MongoDB, Vercel, AWS, GitHub.</li>
                                 <li>Live site (optimized for mobile):
                                     <a href="https://fantasyfairway.com" target="_blank">Fantasyfairway.com</a>
                                 </li>
@@ -131,41 +200,7 @@
                             </div>
                         </div>
                     </li>
-                    
-                    <li class="carousel-slide">
-                        <div class="project">
-                            <h3>PickofDayBot.com</h3>
-                            <p>A full-stack subscription service (SaaS) that uses custom algorithms to provide users with daily, data-driven sports analytics and picks.</p>
-                            <ul>
-                                <li>Engineered three sports analytics algorithms (2 MLB, 1 NFL) that independently deliver daily picks and update results in real time.</li>
-                                <li>Connected with Stripe API to build a complete subscription service, handling payment gateways, checkout sessions, and Stripe webhooks to manage user subscription status.</li>
-                                <li>Stack: React, Node.js, Next.js, Bcrypt. Platforms: Stripe, Vercel, MongoDB, GitHub.</li>
-                                <li>Live site (optimized for mobile phones):
-                                    <a href="https://Pickofdaybot.com" target="_blank">Pickofdaybot.com</a>
-                                </li>
-                            </ul>
-                            <div class="media-row">
-                                <div class="iframe-container">
-                                    <p>Interact with the live mobile view:</p>
-                                    <iframe
-                                        src="https://pickofdaybot.com"
-                                        title="Pick of Day Bot Mobile View"
-                                        allow="geolocation; microphone; camera"
-                                    ></iframe>
-                                </div>
-                                <div class="qr-column">
-                                    <div class="qr-container">
-                                        <p>Scan to visit:</p>
-                                        <img src="qr-code.png" alt="QR code for live-scorecard.com">
-                                    </div>
-                                    <div class="qr-note">
-                                        <p>Due to security concerns, login and signup are disabled when interacting on this demo.<br>
-                                        (Use the link for login features)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
 
@@ -174,31 +209,32 @@
             </button>
         </div>
     </section>
+
     <section id="skills">
         <h2>Technical Skills</h2>
+
+        <h3>Tools & Platforms</h3>
+        <ul>
+            <li>Splunk</li>
+            <li>AWS (EC2/S3)</li>
+            <li>Vercel</li>
+            <li>Postman</li>
+            <li>DNS Management</li>
+            <li>Linux CLI</li>
+            <li>MongoDB</li>
+            <li>Git / GitHub</li>
+        </ul>
 
         <h3>Languages & Frameworks</h3>
         <ul>
             <li>JavaScript (ES6+)</li>
-            <li>TypeScript</li>
             <li>Python</li>
             <li>SQL</li>
             <li>HTML/CSS</li>
-            <li>React</li>
             <li>Next.js</li>
             <li>Node.js</li>
         </ul>
 
-        <h3>Tools & Platforms</h3>
-        <ul>
-            <li>Vercel</li>
-            <li>AWS</li>
-            <li>Azure</li>
-            <li>MongoDB</li>
-            <li>MySQL</li>
-            <li>NextAuth.js</li>
-            <li>Git / GitHub</li>
-        </ul>
         <h3>Certification Prep Courses (Rowan University)</h3>
         <ul>
             <li>CompTIA CySA+</li>
@@ -231,9 +267,8 @@
         </p>
     </section>
 
-
     <script src="scripts.js"></script>
 
     <button id="night-mode-toggle" class="night-mode-button" aria-label="Toggle night mode">🌙</button>
-    </body>
+</body>
 </html>
